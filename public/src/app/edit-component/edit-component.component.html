@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <p>edit-component works!</p>
+    <h2>Favorite authors</h2>
+    <button [routerLink]="['/home']">Home</button>
+    <button (click)="backClicked()">Back</button>
+    <p>Add a new author:</p>
+    <div class="display-form">
+        <p>Name : {{author.name}}</p>
+        <form (submit)="editAuthorById()">
+            <input name="name" type="text" [(ngModel)]="author.name">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</div>
